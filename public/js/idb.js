@@ -29,17 +29,16 @@ function saveRecord(record) {
 }
 
 function uploadTransaction() {
-	// open a transaction on your db
 	const transaction = db.transaction(["new_transaction"], "readwrite");
 
-	// access your object store
+	// access the object store
 	const transactionObjectStore = transaction.objectStore("new_transaction");
 
-	// get all records from store and set to a variable
+	// get all records from store
 	const getAll = transactionObjectStore.getAll();
 
 	getAll.onsuccess = function () {
-		// if there was data in indexedDb's store, let's send it to the api server
+		// send indexedDb data to the api server
 		if (getAll.result.length > 0) {
 			fetch("/api/transaction", {
 				method: "POST",
@@ -59,7 +58,7 @@ function uploadTransaction() {
 					// access the new_transaction object store
 					const transactionObjectStore =
 						transaction.objectStore("new_transaction");
-					// clear all items in your store
+					// clear all items
 					transactionObjectStore.clear();
 
 					alert("All saved transaction has been submitted!");
