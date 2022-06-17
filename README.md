@@ -6,9 +6,9 @@
 
 ## Description
 
-This application is a budget tracker that has both online and offline functionality. The application gives the user the opportunity to manage their funds whether or not an internet connection is available. This ensures that the user will have an access to an accurate balance.
+This application is a budget tracker that has both online and offline functionality. The application gives the user the opportunity to manage their funds whether or not an internet connection is available. This ensures that the user will have convenient access to an accurate balance.
 
-Any transactions that are made while the user is offline will be updated locally so that the user can see a running total. Once an internet connection is re-established, the tracker total will update in the app and the user will receive a notification that the transactions have been added to the transaction history.
+Any transactions that are made while the user is offline will be updated locally so that the user can see the running total. Once an internet connection is re-established, the tracker total will update in the app and the user will receive a notification that all offline transactions have been added to their transaction history.
 
 ## Usage
 
